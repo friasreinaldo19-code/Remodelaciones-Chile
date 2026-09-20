@@ -1,10 +1,11 @@
-# [Project name]
+# Oficio Norte — Remodelaciones
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Sitio web multipágina para un maestro de obra en Santiago, Chile, con servicios, proyectos Antes / Después, precios referenciales y contacto directo por WhatsApp.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/remodelaciones-chile run dev` — run the public website
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
@@ -22,23 +23,30 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/remodelaciones-chile/src/App.tsx` — shared shell, routes, page content, WhatsApp links and editable placeholders
+- `artifacts/remodelaciones-chile/src/index.css` — shared visual system, responsive layout, typography, motion and palette variables
+- `artifacts/remodelaciones-chile/public/images/` — generated renovation imagery used by the static site
+- `artifacts/remodelaciones-chile/public/robots.txt` — basic crawler policy
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The public site is frontend-only and uses wouter for client-side page routing; no backend or database is needed for the current brochure experience.
+- All pages use one shared header and footer so contact details and navigation remain consistent.
+- WhatsApp is the primary conversion path; the contact form formats the visitor's message and opens WhatsApp with the details prefilled.
+- Phone, location, imagery, and team photography are intentionally marked as replacement points in `App.tsx` for future customization.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+The site includes Inicio, Servicios, Antes / Después, Nosotros, Precios and Contacto pages, plus a responsive hamburger menu, floating WhatsApp action, project gallery, service detail cards, price ranges and a contact handoff form.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+The site should remain mobile-first, readable, editable and easy to expand with additional services, projects and team members.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The Vite config expects `PORT` and `BASE_PATH`; managed workflows provide them automatically. For a manual production build, set both variables.
+- Replace the WhatsApp number before publishing; the current value is an intentional placeholder.
 
 ## Pointers
 

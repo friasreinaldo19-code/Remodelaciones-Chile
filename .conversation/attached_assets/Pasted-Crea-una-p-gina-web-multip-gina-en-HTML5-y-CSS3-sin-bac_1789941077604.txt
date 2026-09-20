@@ -1,0 +1,14 @@
+Crea una página web multipágina en HTML5 y CSS3 (sin backend, archivos estáticos enlazados entre sí) para un maestro de obra especializado en remodelaciones en Chile. Debe tener un menú de navegación fijo presente en todas las páginas, con las siguientes secciones/páginas:
+Inicio (index.html): Hero llamativo tipo "Remodelaciones de calidad en [comuna]" con subtítulo corto y botón grande de WhatsApp; abajo un resumen breve de servicios con enlace "Ver más" hacia la página de Servicios, y una muestra pequeña (3-4 fotos) de la galería con enlace "Ver galería completa"
+Servicios (servicios.html): tarjetas detalladas de cada servicio — remodelación de cocinas, baños, techos de madera, empotrados/carpintería — con espacio para agregar más servicios fácilmente a futuro
+Galería (galeria.html): grid de fotos Antes/Después en pares (usar imágenes de ejemplo por ahora, con comentarios <!-- REEMPLAZAR: foto antes --> para reemplazar fácilmente), estructurado para poder seguir agregando proyectos con el tiempo
+Sobre Nosotros (nosotros.html): historia breve, experiencia, y una sección "Nuestro Equipo" con tarjetas de miembros (usar 1 tarjeta de ejemplo con comentario <!-- AGREGAR MIEMBRO DE EQUIPO: copiar esta tarjeta --> para poder sumar más trabajadores fácilmente a medida que el equipo crezca)
+Precios (precios.html): rangos referenciales por servicio (ej: "Remodelación de baño: desde $X") con nota de "cotización sin costo"
+Contacto (contacto.html): número de WhatsApp (placeholder tipo +56 9 XXXX XXXX), ubicación, y botón grande de WhatsApp
+El header con el menú y el footer con contacto deben repetirse igual en todas las páginas. Priorizar diseño mobile-first, ya que la mayoría de los visitantes entrarán desde celular.
+Usar HTML5, CSS3 y JavaScript donde haga falta interactividad — en particular, un menú hamburguesa animado con JavaScript que se despliegue/colapse correctamente en pantallas de celular.
+Paleta de colores (usar variables CSS en :root, en un archivo styles.css compartido por todas las páginas):
+Color dorado/oro (amarillo cálido) como color principal de acento — botones y detalles destacados
+Gris claro tipo metal para fondos secundarios y bordes
+Marrón tipo madera como color base/complementario en textos o secciones
+Diseño moderno, mobile-first, tipografía legible, buen contraste entre colores. Todo el texto, teléfonos e imágenes deben estar claramente comentados en el código para poder reemplazarlos y ampliarlos fácilmente con el tiempo.

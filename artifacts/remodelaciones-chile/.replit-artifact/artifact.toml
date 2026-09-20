@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Remodelaciones Chile"
+description = "Sitio web multipágina mobile-first para un maestro de obra especializado en remodelaciones residenciales en Chile, con servicios, proyectos, precios referenciales y contacto directo por WhatsApp."
+version = "1.0.0"
+id = "artifacts/remodelaciones-chile"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25022
+
+[services.development]
+run = "pnpm --filter @workspace/remodelaciones-chile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/remodelaciones-chile", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/remodelaciones-chile/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25022"
+BASE_PATH = "/"
